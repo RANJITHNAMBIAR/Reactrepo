@@ -7,7 +7,7 @@ console.log('BarFillheight');
 console.log(Props.value);
 if(Props.value > 0){
     barFillheight = Math.round((Props.value/Props.maxvalue) * 100) + '%';
-     console.log('BarFillheightSet');
+     console.log('BarFillheightSettextere');
     console.log(barFillheight);
 }
 return( 
