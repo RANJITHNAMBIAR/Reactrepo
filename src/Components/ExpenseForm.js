@@ -7,15 +7,17 @@ function ExpenseForm(props)  {
     const [enteredAmount,setEnteredAmt] = useState('');
     const [enteredDate,setEnteredDate] = useState('');
     const titleChangeHandler = (event) => {
+        console.log('Titlent');
         setEnteredTitle(event.target.value);
     };
 
     const AmountChangeHandler = (event) => {
+        console.log('Amount');
         setEnteredAmt(event.target.value);
     };
     
     const dateChangeHandler = (event) => {
-        console.log('expenseForm');
+        console.log('datecahanged');
         console.log(event.target.value);
         setEnteredDate(event.target.value);
     };
@@ -24,10 +26,11 @@ function ExpenseForm(props)  {
         console.log('ExpenseForm Submit Handler');
         event.preventDefault();
         console.log('After Pressed');
+        console.log(enteredDate);
         const expenseData={
             expenseTitle: enteredTitle,
-            amount: enteredAmount,
-            date: new Date(2021, 2, 28)
+            amount:  enteredAmount,
+            date: new Date(enteredDate)
         };
         console.log(expenseData);
         props.OnSaveExpenseDatahandler(expenseData);

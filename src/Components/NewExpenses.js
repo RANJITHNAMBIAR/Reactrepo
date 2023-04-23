@@ -1,5 +1,3 @@
-
-
 import ExpenseForm from "./ExpenseForm";
 
 const NewExpenses = (props)  => {
@@ -18,7 +16,6 @@ const NewExpenses = (props)  => {
     
     return (
         <div className="new-expense">
-        
         <ExpenseForm OnSaveExpenseDatahandler={OnSaveExpenseData}></ExpenseForm>
         </div>
 
